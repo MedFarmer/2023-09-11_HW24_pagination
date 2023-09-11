@@ -1,0 +1,102 @@
+* {
+    margin-top:0px; 
+    padding:0px;
+}
+
+.block {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+th, td {
+    border: 1px solid black;  
+    padding: 10px;
+    width:200px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+.delete {    
+    padding: 20px;
+    width:480px;
+}
+
+.delete form {
+    margin-top: 50px;
+    display: flex;
+}
+.delete button {
+    
+    margin-left: 210px;
+    width: 100px;
+}
+.cancel {
+    border:2px solid black;
+    width: 100px;
+    text-align: center;
+    background-color:  rgb(240,240,240);
+
+}
+
+.cancel a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.modify {    
+    padding: 20px;
+    width:480px;
+}
+
+.modify form {
+    margin-top: 50px;
+    
+}
+
+.modify button {
+    
+    margin-left: 270px;
+    width: 100px;
+}
+
+.cancel_modify {
+    border:2px solid black;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(240,240,240);
+
+}
+.footer {
+    margin-top: 30px;
+    display: flex;
+}
+
+.cancel_modify a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.add_footer {
+    margin-top: 50px;
+    display: flex;
+}
+
+.add_footer button {
+    
+    margin-left: 220px;
+    width: 100px;
+}
+
+.cancel_add {
+    
+    border:2px solid black;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(240,240,240);
+
+}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>update</title>
+    {% endblock %}
+
+{% block content %}
+    <div class="modify">
+        <h3>Are you sure you want to modify?</h3>
+        <form method="POST"> 
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="footer">
+                <div class="cancel_modify"><a href="{% url 'home' %}"> Cancel</a></div>
+                <button type="submit"> Update </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

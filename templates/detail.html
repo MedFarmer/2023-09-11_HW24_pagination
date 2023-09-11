@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>detail</title>
+    {% endblock %}
+{% block content %}  
+    <table>
+        <tr> 
+            <th> # pk </th>
+            <th> Student Name </th>
+            <th> Student Grade </th>
+        </tr>
+        <tr> 
+            <th> {{ student_details.pk }} </th>   
+            <th> {{ student_details.name }} </th>
+            <th> {{ student_details.grade }} </th>
+        </tr>  
+    </table>
+{% endblock %}

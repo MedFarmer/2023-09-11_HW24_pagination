@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>home </title>
+    {% endblock %}
+{% block content %}
+    <h2> List of all students </h2> <br>
+    <table>
+        
+        <tr>
+            <th> ID </th>
+            <th> Student Name </th>
+            <th> Modify Student Data </th>
+            <th> Delete Student Data </th>
+        </tr>
+        
+        {% for each in students %}
+        <tr>
+            <td>
+                {{each.id}}
+            </td>
+            <td>
+                <a href="{% url 'detail' each.pk %}"> {{ each.name }} </a>
+            </td>
+            <td>
+                <a href="{% url 'update' each.pk %}"> Modify </a>
+            </td>
+            <td>
+                <a href="{% url 'delete' each.pk %}"> Delete </a>
+            </td>
+        </tr>
+        {% endfor %}               
+    </table>
+    <br>
+
+    {% if students.has_previous %}
+    <a href="?page={{ students.previous_page_number }}"> < </a>
+    {% endif %}
+
+    <span class="current"> {{ students.number }} from {{ students.paginator.num_pages }}</span>     
+    {% if students.has_next %}
+        <a href="?page={{ students.next_page_number }}"> > </a>
+    {% endif %}
+
+    <br><br>
+    <strong> <a href="{% url 'add' %}"> Press to add new student </a> </strong>
+
+{% endblock %}
